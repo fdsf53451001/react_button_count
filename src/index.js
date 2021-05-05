@@ -5,11 +5,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyButton from './MyButton';
 
+function buttonProvider(){
+  var btnContainer = []
+  btnContainer.push(<h1>CGU!</h1>)
+  btnContainer.push(<hr/>)
+  for(let i=0;i<10;i++){
+    btnContainer.push(<MyButton/>);
+  }
+  return btnContainer;
+}
+
 ReactDOM.render(
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>,
-  <MyButton/>,
+  buttonProvider(),
   document.getElementById('root')
 );
 
